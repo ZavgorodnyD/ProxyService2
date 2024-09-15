@@ -31,7 +31,7 @@ namespace ProxyService2.Controllers
             var response = await _httpClient.GetAsync($"https://reqres.in/api/users/{id}");
             if (!response.IsSuccessStatusCode)
             {
-                return NotFound($"User with id {id} not found.");
+                return NotFound($"Пользователь с id {id} не найден.");
             }
 
             var responseContent = await response.Content.ReadAsStringAsync();
