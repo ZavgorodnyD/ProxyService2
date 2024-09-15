@@ -1,6 +1,9 @@
-﻿namespace ProxyService2.Interfaces
+﻿using ProxyService2.Models;
+
+namespace ProxyService2.Interfaces
 {
-    public class IUserService
+    public interface IUserService
     {
+        Task<User> GetUserById(int id);
     }
 }
